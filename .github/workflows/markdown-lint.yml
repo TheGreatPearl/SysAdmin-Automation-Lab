@@ -1,0 +1,19 @@
+name: Validate Markdown
+
+on:
+  push:
+    branches: [ main, master ]
+  pull_request:
+    branches: [ main, master ]
+
+jobs:
+  lint:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Run Markdown Linter
+        uses: DavidAnson/markdownlint-cli2-action@v12
+        with:
+          globs: '**/*.md'
