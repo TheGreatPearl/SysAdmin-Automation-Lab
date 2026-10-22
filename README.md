@@ -34,4 +34,5 @@ Integrated a local **Linux (Ubuntu)** virtual environment with a cloud-based **I
 ### Key Implementation Steps:
 1. **Agent Deployment:** Provisioned and installed the secure **JumpCloud system agent (`jcagent`)** on an **Ubuntu VM**, establishing real-time cloud-to-device communication and monitoring.
 2. **User Lifecycle & Synchronization:** Created remote **cloud user identities** and synchronized them directly down to the local **Linux host**, verifying user provisioning via system diagnostics (`id` and `getent`).
-3. **Hybrid Architecture Practice:** Simulated a modern **cloud-first corporate IT** environment where machine access and user permissions are managed centrally from the cloud rather than locally.
+3. **Security Policy Enforcement (MDM):** Applied remote security compliance policies (such as **Linux Lock Screen timeout**) via cloud MDM and verified policy execution locally using `gsettings` and system diagnostics.
+4. **Hybrid Architecture Practice:** Simulated a modern **cloud-first corporate IT** environment where machine access, security policies, and user permissions are managed centrally from the cloud.
