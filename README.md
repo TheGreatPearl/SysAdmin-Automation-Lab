@@ -1,3 +1,4 @@
+
 # Linux SysAdmin Automation & Monitoring Suite
 
 A hands-on Linux administration project containing Bash scripts designed to automate user lifecycle onboarding and perform system health diagnostics in enterprise environments.
@@ -43,3 +44,5 @@ Integrated a local **Linux (Ubuntu)** virtual environment with a cloud-based **I
 2. **User Lifecycle & Synchronization:** Created remote **cloud user identities** and synchronized them directly down to the local **Linux host**, verifying user provisioning via system diagnostics (`id` and `getent`).
 3. **Security Policy Enforcement (MDM):** Applied remote security compliance policies (such as **Linux Lock Screen timeout**) via cloud MDM and verified policy execution locally using `gsettings` and system diagnostics.
 4. **Hybrid Architecture Practice:** Simulated a modern **cloud-first corporate IT** environment where machine access, security policies, and user permissions are managed centrally from the cloud.
+
+
