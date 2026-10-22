@@ -3,7 +3,7 @@
 # ==============================================================================
 # Script Name: user_onboarding.sh
 # Description: Automates new employee setup (User, Group, Directory, SSH structure)
-# Author: Your Name
+# Author: Tal
 # ==============================================================================
 
 # Ensure script is run with sudo privileges
@@ -40,6 +40,12 @@ if id "$USERNAME" > /dev/null 2>&1; then
 else
     useradd -m -g "$GROUP" -s /bin/bash "$USERNAME"
     echo "[+] Created user '$USERNAME' and assigned to group '$GROUP'."
+
+    # Set temporary password and force change upon first login
+    TEMP_PASS="TempPassword123!"
+    echo "$USERNAME:$TEMP_PASS" | chpasswd
+    chage -d 0 "$USERNAME"
+    echo "[+] Set temporary password and forced password change on first login."
 fi
 
 # 3. Setup SSH directory structure for secure access
@@ -54,4 +60,3 @@ echo "[+] Configured SSH key directory at $USER_HOME/.ssh"
 echo "----------------------------------------"
 echo "[V] Onboarding completed successfully for $USERNAME!"
 echo "----------------------------------------"
-
