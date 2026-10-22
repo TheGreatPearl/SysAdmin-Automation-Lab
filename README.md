@@ -24,7 +24,15 @@ A hands-on Linux administration project containing Bash scripts designed to auto
 ```bash
 chmod +x user_onboarding.sh
 sudo ./user_onboarding.sh <username> <group_name>
+```
 
+### 2. System Health Check Script
+```bash
+chmod +x system_health_check.sh
+./system_health_check.sh
+```
+
+---
 
 ## Cloud Identity & Device Management (JumpCloud MDM)
 
