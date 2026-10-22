@@ -1,7 +1,18 @@
-
 # Linux SysAdmin Automation & Monitoring Suite
 
+
 A hands-on Linux administration project containing Bash scripts designed to automate user lifecycle onboarding and perform system health diagnostics in enterprise environments.
+
+---
+
+## Repository Structure
+
+```text
+.
+├── README.md
+├── user_onboarding.sh        # Identity & Access Management automation script
+└── system_health_check.sh    # Automated host health diagnostics script
+```
 
 ---
 
@@ -22,14 +33,24 @@ A hands-on Linux administration project containing Bash scripts designed to auto
 * `sudo` privileges for onboarding tasks
 
 ### 1. User Onboarding Script
+Automates the creation of a user, assigns them to their primary group, provisions the home directory, and sets permissions for SSH access.
+
 ```bash
+# Make script executable
 chmod +x user_onboarding.sh
+
+# Run with target username and group
 sudo ./user_onboarding.sh <username> <group_name>
 ```
 
 ### 2. System Health Check Script
+Monitors critical system thresholds including root partition storage, memory consumption, and SSH daemon uptime.
+
 ```bash
+# Make script executable
 chmod +x system_health_check.sh
+
+# Execute health check
 ./system_health_check.sh
 ```
 
@@ -45,4 +66,15 @@ Integrated a local **Linux (Ubuntu)** virtual environment with a cloud-based **I
 3. **Security Policy Enforcement (MDM):** Applied remote security compliance policies (such as **Linux Lock Screen timeout**) via cloud MDM and verified policy execution locally using `gsettings` and system diagnostics.
 4. **Hybrid Architecture Practice:** Simulated a modern **cloud-first corporate IT** environment where machine access, security policies, and user permissions are managed centrally from the cloud.
 
+### Diagnostics & Verification Commands:
+```bash
+# 1. Verify cloud user synchronization on local host
+id <username>
+getent passwd <username>
 
+# 2. Check JumpCloud agent service status
+sudo systemctl status jcagent
+
+# 3. Verify applied MDM lock screen policy (idle timeout in seconds)
+gsettings get org.gnome.desktop.session idle-delay
+```
