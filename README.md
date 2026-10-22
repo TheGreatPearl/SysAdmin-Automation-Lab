@@ -4,7 +4,7 @@ A hands-on Linux administration project containing Bash scripts designed to auto
 
 ---
 
-##  Included Tools & Scripts
+## Included Tools & Scripts
 
 | Script Name | Category | Description |
 | :--- | :--- | :--- |
@@ -13,7 +13,7 @@ A hands-on Linux administration project containing Bash scripts designed to auto
 
 ---
 
-##  How to Run
+## How to Run
 
 ### Prerequisites
 * Linux OS (Ubuntu / Debian / RHEL)
@@ -24,7 +24,6 @@ A hands-on Linux administration project containing Bash scripts designed to auto
 ```bash
 chmod +x user_onboarding.sh
 sudo ./user_onboarding.sh <username> <group_name>
-
 
 
 ## Cloud Identity & Device Management (JumpCloud MDM)
