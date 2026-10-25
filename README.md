@@ -11,7 +11,7 @@ A hands-on Linux administration project containing Bash scripts designed to auto
 .
 ├── README.md
 ├── user_onboarding.sh        # Identity & Access Management automation script
-└── system_health_check.sh    # Automated host health diagnostics script
+└── health_check.sh    # Automated host health diagnostics script
 ```
 
 ---
