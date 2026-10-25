@@ -21,7 +21,7 @@ A hands-on Linux administration project containing Bash scripts designed to auto
 | Script Name | Category | Description |
 | :--- | :--- | :--- |
 | `user_onboarding.sh` | Identity & Access Management | Automates new employee setup: creates groups, users, home directories, and configures secure SSH structure. |
-| `system_health_check.sh` | Infrastructure Monitoring | Performs automated health checks on root partition disk usage, RAM utilization, and SSH daemon availability. |
+| `health_check.sh` | Infrastructure Monitoring | Performs automated health checks on root partition disk usage, RAM utilization, and SSH daemon availability. |
 
 ---
 
@@ -48,10 +48,10 @@ Monitors critical system thresholds including root partition storage, memory con
 
 ```bash
 # Make script executable
-chmod +x system_health_check.sh
+chmod +x health_check.sh
 
 # Execute health check
-./system_health_check.sh
+./health_check.sh
 ```
 
 ---
